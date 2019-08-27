@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="slideshow1">
+    <tr>
+        <td><img src="gamepuzzle/pic1-1.png" id="puzzle1" height="320" width="709"/></td>
+        <td><input type="button" value="prev" onclick="prev1()"></td>
+        <td><input type="button" value="next" onclick="next1()"></td>
+    </tr>
+    <tr>
+        <td><img src="gamepuzzle/pic2-1.png" id="puzzle2" height="320" width="710"/></td>
+        <td><input type="button" value="prev" onclick="prev2()"></td>
+        <td><input type="button" value="next" onclick="next2()"></td>
+    </tr>
+    <tr>
+        <td><img src="gamepuzzle/pic3-1.png" id="puzzle3" height="320" width="710"/></td>
+        <td><input type="button" value="prev" onclick="prev3()"></td>
+        <td><input type="button" value="next" onclick="next3()"></td>
+    </tr>
+</table>
+<script>
+    let count=0;
+    let arrayimg=[];
+    arrayimg[0]="gamepuzzle/pic1-1.png";
+    arrayimg[1]="gamepuzzle/pic1-3.png";
+    arrayimg[2]="gamepuzzle/pic2-1.png";
+    arrayimg[3]="gamepuzzle/pic1-2.png";
+    arrayimg[4]="gamepuzzle/pic3-1.png";
+    arrayimg[5]="gamepuzzle/pic3-2.png";
+    arrayimg[6]="gamepuzzle/pic2-3.png";
+    arrayimg[7]="gamepuzzle/pic3-3.png";
+    arrayimg[8]="gamepuzzle/pic2-2.png";
+    function next1() {
+        count++;
+        if(count>8){
+            count=0;
+        }
+        document.images["puzzle1"].src=arrayimg[count];
+    }
+    function next2() {
+        count++;
+        if(count>8){
+            count=0;
+        }
+        document.images["puzzle2"].src=arrayimg[count];
+    }
+    function next3() {
+        count++;
+        if(count>8){
+            count=0;
+        }
+        document.images["puzzle3"].src=arrayimg[count];
+    }
+    function prev1() {
+        count--;
+        if(count<0){
+            count=8;
+        }
+        document.images["puzzle1"].src=arrayimg[count];
+    }
+    function prev2() {
+        count--;
+        if(count<0){
+            count=8;
+        }
+        document.images["puzzle2"].src=arrayimg[count];
+    }
+    function prev3() {
+        count--;
+        if(count<0){
+            count=8;
+        }
+        document.images["puzzle3"].src=arrayimg[count];
+    }
+    </script>
+</body>
+</html>
